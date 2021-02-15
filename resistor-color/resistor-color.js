@@ -3,9 +3,7 @@
 // convenience to get you started writing code faster.
 
 //FP:
-export const colorCode = (color) => {
-  return COLORS.indexOf(color)
-}
+export const colorCode = (color) => COLORS.indexOf(color);
 
 //OOP:
 

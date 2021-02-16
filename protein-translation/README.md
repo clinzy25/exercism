@@ -1,3 +1,7 @@
+TODO: 
+-fix duplicate test
+-fix stop codons in the middle test
+
 # Protein Translation
 
 Translate RNA sequences into proteins.

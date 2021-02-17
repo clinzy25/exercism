@@ -18,13 +18,4 @@ const COLORS = [
   "white"
 ];
 
-export const decodedValue = (arr) => {
-  let result = [];
-  for (let color of COLORS) {
-    if (color === arr[0]) 
-      result.unshift(COLORS.indexOf(arr[0]));
-    if (color === arr[1]) 
-      result.push(COLORS.indexOf(arr[1]));
-  }
-  return Number(result.join(''));
-};
+export const decodedValue = (arr) => (COLORS.indexOf(arr[1]) * 0.1 + COLORS.indexOf(arr[0])) * 10;

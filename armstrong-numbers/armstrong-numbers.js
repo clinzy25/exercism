@@ -5,10 +5,9 @@
 
 export const isArmstrongNumber = (input) => {
   const num = input.toString();
-  const numDigits = num.length;
   let result = 0;
   for (let digit of num) {
-    result += digit**numDigits;
+    result += digit**num.length;
   }
   return result == input ? true : false;
 };

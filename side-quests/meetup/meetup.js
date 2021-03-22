@@ -1,8 +1,23 @@
-//
-// This is only a SKELETON file for the 'Meetup' exercise. It's been provided as a
-// convenience to get you started writing code faster.
-//
+const WEEKDAYS = ['Monday',
+                  'Tuesday',
+                  'Wednesday',
+                  'Thursday',
+                  'Friday',
+                  'Saturday',
+                  'Sunday']
 
-export const meetup = () => {
-  throw new Error('Remove this statement and implement this function');
+const ORDINALS = ['first', 'second', 'third', 'fourth', 'fifth']
+
+export const meetup = (year, month, ordinal, dayOfWeek) => {
+  for (let i = WEEKDAYS.indexOf(dayOfWeek); i < 31; i++) {
+    for (let j = 0; j < 31; j++) {
+      if (WEEKDAYS[i] == dayOfWeek && ORDINALS[j] == ordinal)
+        return new Date(year, month - 1, new Date(year, month -1, i).getDate())
+    }//TRY RECURSION
+  }
 };
+
+
+//first, second, third, fourth, fifth, last,
+//monteenth, tuesteenth, wednesteenth, thursteenth, 
+//friteenth, saturteenth, sunteenth

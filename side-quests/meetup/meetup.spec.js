@@ -1,7 +1,7 @@
 import { meetup } from './meetup';
 
 describe('Meetup', () => {
-  test('monteenth of May 2013', () => {
+  xtest('monteenth of May 2013', () => {
     expect(meetup(2013, 5, 'teenth', 'Monday')).toEqual(new Date(2013, 4, 13));
   });
 
@@ -13,7 +13,7 @@ describe('Meetup', () => {
     expect(meetup(2013, 9, 'teenth', 'Monday')).toEqual(new Date(2013, 8, 16));
   });
 
-  xtest('tuesteenth of March 2013', () => {
+  test('tuesteenth of March 2013', () => {
     expect(meetup(2013, 3, 'teenth', 'Tuesday')).toEqual(new Date(2013, 2, 19));
   });
 
@@ -103,7 +103,7 @@ describe('Meetup', () => {
     expect(meetup(2013, 10, 'teenth', 'Sunday')).toEqual(new Date(2013, 9, 13));
   });
 
-  xtest('first Monday of March 2013', () => {
+  test('first Monday of March 2013', () => {
     expect(meetup(2013, 3, 'first', 'Monday')).toEqual(new Date(2013, 2, 4));
   });
 
@@ -159,7 +159,7 @@ describe('Meetup', () => {
     expect(meetup(2013, 4, 'first', 'Sunday')).toEqual(new Date(2013, 3, 7));
   });
 
-  xtest('second Monday of March 2013', () => {
+  test('second Monday of March 2013', () => {
     expect(meetup(2013, 3, 'second', 'Monday')).toEqual(new Date(2013, 2, 11));
   });
 
@@ -227,7 +227,7 @@ describe('Meetup', () => {
     expect(meetup(2013, 4, 'second', 'Sunday')).toEqual(new Date(2013, 3, 14));
   });
 
-  xtest('third Monday of March 2013', () => {
+  test('third Monday of March 2013', () => {
     expect(meetup(2013, 3, 'third', 'Monday')).toEqual(new Date(2013, 2, 18));
   });
 
@@ -289,7 +289,7 @@ describe('Meetup', () => {
     expect(meetup(2013, 4, 'third', 'Sunday')).toEqual(new Date(2013, 3, 21));
   });
 
-  xtest('fourth Monday of March 2013', () => {
+  test('fourth Monday of March 2013', () => {
     expect(meetup(2013, 3, 'fourth', 'Monday')).toEqual(new Date(2013, 2, 25));
   });
 
@@ -361,7 +361,7 @@ describe('Meetup', () => {
     expect(meetup(2013, 4, 'fourth', 'Sunday')).toEqual(new Date(2013, 3, 28));
   });
 
-  xtest('last Monday of March 2013', () => {
+  test('last Monday of March 2013', () => {
     expect(meetup(2013, 3, 'last', 'Monday')).toEqual(new Date(2013, 2, 25));
   });
 

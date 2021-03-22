@@ -39,7 +39,7 @@ describe('ProteinTranslation', () => {
       expect(translate('UUUUUU')).toEqual(['Phenylalanine', 'Phenylalanine']);
     });
 
-    test('Sequence of two different protein codons translates into proteins', () => {
+    xtest('Sequence of two different protein codons translates into proteins', () => {
       expect(translate('UUAUUG')).toEqual(['Leucine', 'Leucine']);
     });
 
@@ -73,19 +73,19 @@ describe('ProteinTranslation', () => {
   });
 
   describe('Unexpected strands', () => {
-    test("Non-existing codon can't translate", () => {
+    xtest("Non-existing codon can't translate", () => {
       expect(() => translate('AAA')).toThrow(new Error('Invalid codon'));
     });
 
-    test("Unknown amino acids, not part of a codon, can't translate", () => {
+    xtest("Unknown amino acids, not part of a codon, can't translate", () => {
       expect(() => translate('XYZ')).toThrow(new Error('Invalid codon'));
     });
 
-    test("Incomplete RNA sequence can't translate", () => {
+    xtest("Incomplete RNA sequence can't translate", () => {
       expect(() => translate('AUGU')).toThrow(new Error('Invalid codon'));
     });
 
-    test('Incomplete RNA sequence can translate if valid until a STOP codon', () => {
+    xtest('Incomplete RNA sequence can translate if valid until a STOP codon', () => {
       expect(translate('UUCUUCUAAUGGU')).toEqual([
         'Phenylalanine',
         'Phenylalanine',

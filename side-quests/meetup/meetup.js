@@ -8,16 +8,15 @@ const WEEKDAYS = ['Monday',
 
 const ORDINALS = ['first', 'second', 'third', 'fourth', 'fifth']
 
+
 export const meetup = (year, month, ordinal, dayOfWeek) => {
-  for (let i = WEEKDAYS.indexOf(dayOfWeek); i < 31; i++) {
-    for (let j = 0; j < 31; j++) {
-      if (WEEKDAYS[i] == dayOfWeek && ORDINALS[j] == ordinal)
-        return new Date(year, month - 1, new Date(year, month -1, i).getDate())
-    }//TRY RECURSION
-  }
+  let ordinalCount = 0;
+  let dayOfWeekCount = new Date(year, month).getDay();
+  const test = () => {
+    if (ordinalCount == 4) ordinalCount == 0;
+    if (dayOfWeekCount == 6) dayOfWeekCount == 0;
+    if (WEEKDAYS[dayOfWeekCount] == dayOfWeek && ORDINALS[ordinalCount] == ordinal)
+      return new Date(year, month);
+    }
+  return test(year, month, ordinal, dayOfWeek);
 };
-
-
-//first, second, third, fourth, fifth, last,
-//monteenth, tuesteenth, wednesteenth, thursteenth, 
-//friteenth, saturteenth, sunteenth

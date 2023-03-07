@@ -50,5 +50,3 @@ class GrainsTest(unittest.TestCase):
 
     def test_returns_the_total_number_of_grains_on_the_board(self):
         self.assertEqual(total(), 18446744073709551615)
-9223372036854775808
-18446744073709551615

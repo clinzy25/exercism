@@ -4,9 +4,7 @@ export class Matrix {
   }
 
   get rows() {
-    return this.str
-      .split('\n')
-      .map((row) => [...Array.from(row.split(' '))].map(Number));
+    return this.str.split('\n').map((row) => row.split(' ').map(Number));
   }
 
   get columns() {
@@ -22,4 +20,3 @@ export class Matrix {
     return columns;
   }
 }
-

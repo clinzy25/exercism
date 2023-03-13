@@ -1,11 +1,6 @@
-def steps(n):
-    if n > 0:
-        num_steps = 0
-        while n > 1:
-            if n % 2 == 0:
-                n /= 2
-            else:
-                n *= 3 + 1
-            num_steps += 1
-        return num_steps
-    raise ValueError("Only positive integers are allowed")
+def steps(n, count=0):
+    if n < 1:
+        raise ValueError("Only positive integers are allowed")
+    if n == 1:
+        return count
+    return steps(n / 2, count + 1) if n % 2 == 0 else steps(3 * n + 1, count + 1)

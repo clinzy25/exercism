@@ -1,5 +1,3 @@
-import functools
-
 def square_of_sum(number):
     return sum(list(range(number + 1))) ** 2
 

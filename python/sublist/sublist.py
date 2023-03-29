@@ -4,7 +4,7 @@ EQUAL = 'EQUAL'
 UNEQUAL = 'UNEQUAL'
 
 def to_str(l):
-    return ' , '.join(map(str, l)) + ' '
+    return ' ,'.join(map(str, l)) + ' '
 
 def sublist(list_one, list_two):
     l1 = to_str(list_one)
